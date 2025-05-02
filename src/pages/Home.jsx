@@ -228,7 +228,7 @@ const Home = () => {
               <h2 className="fw-bold text-black display-5 display-md-4">Smarter Management!</h2>
               <p className="text-gray fs-5">Automate, Streamline & Simplify School Operations!</p>
               <a href="#" className="btn btn-dark btn-lg rounded-pill px-4 shadow-sm">
-                Get Started Now
+                Get Started Nows
               </a>
             </div>
             <div className="col-12 col-md-6 text-center">
