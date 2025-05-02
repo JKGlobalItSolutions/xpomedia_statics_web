@@ -9,10 +9,10 @@ const ContactUs = () => {
     e.preventDefault()
 
     emailjs.sendForm(
-      'service_tm3z842',
-      'template_yixaegr',
+      'service_jy8c4ni',
+      'template_3s9j5rr',
       form.current,
-      'PKYZH-RAbc8EDCT5b'
+      'qEnT8hlk2QokY5Aag'
     )
       .then((result) => {
         console.log(result.text)
@@ -36,19 +36,19 @@ const ContactUs = () => {
               <form ref={form} onSubmit={sendEmail}>
                 <div className="mb-3">
                   <label htmlFor="fullName" className="form-label">Full Name:</label>
-                  <input type="text" className="form-control" name="user_name" placeholder="Enter your name" required />
+                  <input type="text" className="form-control" name="name" placeholder="Enter your name" required />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label">Email Address</label>
-                  <input type="email" className="form-control" name="user_email" placeholder="Enter your email" required />
+                  <input type="email" className="form-control" name="email" placeholder="Enter your email" required />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="phone" className="form-label">Phone Number</label>
-                  <input type="tel" className="form-control" name="user_phone" placeholder="Enter your phone number" />
+                  <input type="tel" className="form-control" name="phone" placeholder="Enter your phone number" />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="subject" className="form-label">Subject</label>
-                  <select className="form-select" name="user_subject">
+                  <select className="form-select" name="subject">
                     <option value="">Select the purpose</option>
                     <option value="inquiry">Inquiry</option>
                     <option value="support">Support</option>
