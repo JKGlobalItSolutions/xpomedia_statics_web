@@ -1,0 +1,56 @@
+
+.logo_lettle{
+    width: 103px;
+height: 25px;
+    font-family: Kumbh Sans;
+font-weight: 600;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+color: rgba(11, 61, 123, 1);
+
+}
+.logo_small{
+    width: 103px;
+height: 15px;
+font-family: Kumbh Sans;
+font-weight: 500;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0%;
+color: rgba(11, 61, 123, 1) !important;
+
+
+}
+.nav_btn{
+    width: 146px;
+height: 41px;
+gap: 10px;
+border-radius: 30px;
+border-width: 1px;
+padding-top: 12px;
+padding-right: 30px;
+padding-bottom: 12px;
+padding-left: 30px;
+color: white !important;
+background: linear-gradient(360deg, #0B3D7B 0%, #1470E1 100%);
+border: 1px solid rgba(20, 112, 225, 1)
+}
+
+
+@media screen and (max-width: 1024px) {
+    .nav_btn{
+   display: none !important;
+    }
+
+
+    
+@media screen and (max-width: 1024px) {
+    .Navber li{
+  margin-left: -20px;
+  
+
+    }
+}  
+}
+

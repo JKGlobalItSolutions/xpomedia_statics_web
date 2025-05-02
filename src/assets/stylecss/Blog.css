@@ -1,0 +1,14 @@
+.Blog_hero{
+    background: linear-gradient(180deg, #D9D9D9 0%, #FFFFFF 100%);
+    box-shadow: 0px 0px 40px 0px #00000080 inset;
+
+}
+.blog_cards{
+    width: 389px;
+height: 419px;
+border-radius: 10px;
+background: #FFFFFF99;
+box-shadow: 0px 0px 14px 0px #0000004D;
+
+
+}

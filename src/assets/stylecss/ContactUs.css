@@ -1,0 +1,101 @@
+.contant_hero {
+    background: linear-gradient(180deg, #D9D9D9 0%, #FFFFFF 100%);
+    box-shadow: 0px 0px 40px 0px #00000080 inset;
+
+}
+
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* .info-card {
+    width: 381.5384521484375px;
+    height: 381.5384521484375px;
+    top: 389.23px;
+    left: 100px;
+    background: #0B3D7B;
+    color: white;
+    border-radius: 10px;
+} */
+.info-card {
+    width: 100%; 
+    height: 250px; 
+    background: #0B3D7B;
+    color: white;
+    border-radius: 10px;
+    margin: 0 auto; 
+    max-width: 400px; 
+    padding: 1.5rem;
+}
+
+/* Optional: Add media queries for fine-tuning */
+@media (max-width: 768px) {
+    .info-card {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+.info-card h3 {
+    font-size: 1.9em;
+    margin: 10px 0;
+}
+
+.info-card p {
+    font-size: 0.9em;
+}
+
+.icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.form-label {
+    color: #2c3e50;
+    font-size: 0.9em;
+}
+
+.btn-primary {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+.btn-primary:hover {
+    background-color: #34495e;
+    border-color: #34495e;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .info-card {
+        padding: 15px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+}
+
+.schoolboy{
+    width: 604px;
+height: 580px !important;
+top: 731px;
+left: 736px;
+border-radius: 10px;
+
+}

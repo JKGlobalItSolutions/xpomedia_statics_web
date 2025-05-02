@@ -1,0 +1,36 @@
+/* Ensure card padding adjusts on small screens */
+@media (max-width: 768px) {
+    .card.shadow {
+      padding: 1.5rem !important; /* Reduced padding on smaller screens */
+    }
+  
+    /* Adjust font size for labels on small screens */
+    .form-label {
+      font-size: 0.9rem !important; /* Smaller font size for readability */
+    }
+  
+    /* Stack checkboxes vertically on very small screens */
+    @media (max-width: 576px) {
+      .d-flex.flex-wrap.gap-3 {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  }
+  
+  /* Ensure inputs and selects take full width */
+  .form-control,
+  .form-select {
+    width: 100%;
+  }
+  
+  /* Fix button overflow on small screens */
+  .btn-lg {
+    max-width: 100%;
+  }
+
+  .Demo_hero{
+    background: linear-gradient(180deg, #D9D9D9 0%, #FFFFFF 100%);
+    box-shadow: 0px 0px 40px 0px #00000080 inset;
+
+  }
