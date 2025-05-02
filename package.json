@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://JKGlobalItSolutions.github.io/xpomedia_statics_web",
+"homepage": "https://JKGlobalItSolutions.github.io/xpomedia_statics_web",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
