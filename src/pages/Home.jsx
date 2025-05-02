@@ -186,6 +186,39 @@ const Home = () => {
 
   return (
     <div className="home-container">
+
+
+
+
+
+<div
+      style={{
+        position: 'fixed',
+        bottom: '40px',
+        right: '20px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '25px',
+        zIndex: 1000,
+      }}
+    >
+      <a
+        href="https://wa.me/919894909505"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ fontSize: '50px', color: '#25D366' }}
+      >
+        <i className="fab fa-whatsapp"></i>
+      </a>
+      <a
+        href="tel:+919894909505"
+        style={{ fontSize: '40px', color: '#0a66c2' }}
+      >
+        <i className="fas fa-phone-alt"></i>
+      </a>
+    </div>
+
+
       {/* Hero Section */}
       <section className="hero_heading d-flex align-items-center py-4 py-md-5">
         <div className="container">
@@ -248,6 +281,10 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+
+
+
       </div>
 
       {/* Management Section */}
