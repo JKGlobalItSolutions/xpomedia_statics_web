@@ -28,36 +28,61 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="collapse Navber navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-5 fw-medium ps-1 gap-3 text-start">
+          <ul className="navbar-nav ms-5 fw-medium ps-1 gap-1 text-start">
             <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
+              <Link className="nav-link" to="/">
+                Home
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/AboutUs">About Us</Link>
+              <Link className="nav-link" to="/AboutUs">
+                About Us
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/ModuleFeatures">Module Features</Link>
+              <Link className="nav-link" to="/ModuleFeatures">
+                Module Features
+              </Link>
             </li>
-           
+
             <li className="nav-item">
-              <Link className="nav-link" to="/Clients">Clients</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Blog">Blog</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Demo">Demo</Link>
+              <Link className="nav-link" to="/Clients">
+                Clients
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/ContactUs">Contact Us</Link>
+              <Link className="nav-link" to="/Blog">
+                Blog
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Demo">
+                Demo
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/ContactUs">
+                Contact Us
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="btn btn-primary" to="/Clienticon">
+                Admin
+              </Link>
             </li>
           </ul>
         </div>
 
         {/* Enquiry Button - Visible only on large screens */}
         <div className="d-none d-lg-block">
-          <Link to="/Enquiry" className="btn nav_btn rounded-pill ms-3">Enquiry Now</Link>
+          <Link to="/Enquiry" className="btn nav_btn rounded-pill ms-3">
+            Enquiry Now
+          </Link>
         </div>
+
+        
       </div>
     </nav>
   );
