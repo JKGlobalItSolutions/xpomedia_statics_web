@@ -22,6 +22,7 @@ import Clients from './pages/Clients';
 import Blog from './pages/Blog';
 import Demo from './pages/Demo';
 import ContactUs from './pages/ContactUs';
+import Clienticon from './pages/Clienticon';
 
 
 function App() {
@@ -37,6 +38,8 @@ function App() {
         <Route  path="/Blog" element={<Blog   />} />
         <Route  path="/Demo" element={<Demo   />} />
         <Route  path="/ContactUs" element={<ContactUs   />} />
+        <Route  path="/Clienticon" element={<Clienticon   />} />
+
       </Routes>
       <Footer/>
     </Router>
