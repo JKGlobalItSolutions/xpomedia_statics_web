@@ -357,7 +357,7 @@ const Home = () => {
                           data-aos-duration="1000"
                           src={
                             logo.image
-                              ? `http://localhost:5000/uploads/${logo.image}`
+                              ? `https://xpomedia-statics-web-backend-1.onrender.com/uploads/${logo.image}`
                               : "/placeholder.svg"
                           }
                           alt={logo.name || `Logo ${index + 1}`}
@@ -379,7 +379,7 @@ const Home = () => {
                     <img
                       src={
                         logo.image
-                          ? `http://localhost:5000/uploads/${logo.image}`
+                          ? `https://xpomedia-statics-web-backend-1.onrender.com/uploads/${logo.image}`
                           : "/placeholder.svg"
                       }
                       alt={logo.name || `Logo ${index + 1}`}

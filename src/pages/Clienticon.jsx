@@ -11,7 +11,13 @@ const Clienticon = () => {
   }, []);
 
   const fetchLogos = async () => {
-    const res = await axios.get("http://localhost:5000/api/logos");
+
+const res = await axios.get("https://xpomedia-statics-web-backend-1.onrender.com/api/logos");
+
+
+    // const res = await axios.get("http://localhost:5000/api/logos");
+
+
     setLogos(res.data);
   };
 
@@ -21,10 +27,12 @@ const Clienticon = () => {
     formData.append("name", newLogo.name);
     formData.append("image", newLogo.image);
 
-    await axios.post("http://localhost:5000/api/logos", formData);
+    await axios.post("https://xpomedia-statics-web-backend-1.onrender.com/api/logos", formData);
+
     setNewLogo({ name: "", image: null });
     await fetchLogos();
   };
+
 
   const handleUpdate = async () => {
     const formData = new FormData();
@@ -32,7 +40,7 @@ const Clienticon = () => {
     if (editingLogo.image) formData.append("image", editingLogo.image);
 
     await axios.put(
-      `http://localhost:5000/api/logos/${editingLogo._id}`,
+      `https://xpomedia-statics-web-backend-1.onrender.com/api/logos/${editingLogo._id}`,
       formData
     );
     setEditingLogo(null);
@@ -40,7 +48,7 @@ const Clienticon = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/logos/${id}`);
+    await axios.delete(`https://xpomedia-statics-web-backend-1.onrender.com/api/logos/${id}`);
     await fetchLogos();
   };
 
@@ -73,7 +81,7 @@ const Clienticon = () => {
           <div key={logo._id} className="col">
             <div className="border p-3 d-flex flex-column align-items-center">
               <img
-                src={`http://localhost:5000/uploads/${logo.image}?v=${Date.now()}`}
+                src={`https://xpomedia-statics-web-backend-1.onrender.com/uploads/${logo.image}?v=${Date.now()}`}
                 alt={logo.name}
                 style={{
                   width: "150px",

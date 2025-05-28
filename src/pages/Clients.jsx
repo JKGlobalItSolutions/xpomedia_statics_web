@@ -7,7 +7,12 @@ const Clients = () => {
   useEffect(() => {
     const fetchLogos = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/logos");
+        // const res = await axios.get("http://localhost:5000/api/logos");
+
+        const res = await axios.get(
+          "https://xpomedia-statics-web-backend-1.onrender.com/api/logos"
+        );
+
         setLogos(res.data);
       } catch (err) {
         console.error("Failed to fetch logos:", err);
@@ -18,7 +23,7 @@ const Clients = () => {
   }, []);
 
   return (
-   <div>
+    <div>
       {/* Hero Section */}
       <div className="container-fluid Clients_hero mb-4 text-center py-3 pt-4">
         <div className="container">
@@ -47,7 +52,12 @@ const Clients = () => {
           {logos.map((logo) => (
             <div key={logo._id} className="col text-center">
               <img
-                src={`http://localhost:5000/uploads/${logo.image}`}
+
+                // src={`http://localhost:5000/uploads/${logo.image}`}
+
+                src={`https://xpomedia-statics-web-backend-1.onrender.com/uploads/${logo.image}`}
+
+
                 alt={logo.name}
                 className="img-fluid  rounded-2"
                 style={{ maxWidth: "200px", height: "200px" }}
@@ -57,7 +67,6 @@ const Clients = () => {
           ))}
         </div>
       </div>
-
     </div>
   );
 };
