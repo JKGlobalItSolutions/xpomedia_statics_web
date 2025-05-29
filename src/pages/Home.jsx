@@ -44,10 +44,12 @@ import IndexCard from "../component/HomeCard";
 const Home = () => {
   const [logos, setLogos] = useState([]);
 
+  const BASE_URL = "https://xpomedia-statics-web-backend-1.onrender.com";
+
   useEffect(() => {
     const fetchLogos = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/logos");
+        const res = await axios.get(`${BASE_URL}/api/logos`);
         setLogos(res.data);
       } catch (err) {
         console.error("Failed to fetch logos:", err);
@@ -61,7 +63,6 @@ const Home = () => {
     duration: 1000, // Animation duration in milliseconds
     once: true, // Whether animation should happen only once
   });
-  
   const [activeTab, setActiveTab] = useState("Administration");
 
   // const logos = [
@@ -357,7 +358,7 @@ const Home = () => {
                           data-aos-duration="1000"
                           src={
                             logo.image
-                              ? `https://xpomedia-statics-web-backend-1.onrender.com/uploads/${logo.image}`
+                              ? `${BASE_URL}/uploads/${logo.image}`
                               : "/placeholder.svg"
                           }
                           alt={logo.name || `Logo ${index + 1}`}
@@ -379,7 +380,7 @@ const Home = () => {
                     <img
                       src={
                         logo.image
-                          ? `https://xpomedia-statics-web-backend-1.onrender.com/uploads/${logo.image}`
+                          ? `${BASE_URL}/uploads/${logo.image}`
                           : "/placeholder.svg"
                       }
                       alt={logo.name || `Logo ${index + 1}`}

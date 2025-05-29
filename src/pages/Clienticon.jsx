@@ -6,49 +6,42 @@ const Clienticon = () => {
   const [newLogo, setNewLogo] = useState({ name: "", image: null });
   const [editingLogo, setEditingLogo] = useState(null);
 
+  const BASE_URL = "https://xpomedia-statics-web-backend-1.onrender.com";
+
   useEffect(() => {
     fetchLogos();
   }, []);
 
   const fetchLogos = async () => {
-
-const res = await axios.get("https://xpomedia-statics-web-backend-1.onrender.com/api/logos");
-
-
-    // const res = await axios.get("http://localhost:5000/api/logos");
-
-
+    const res = await axios.get(`${BASE_URL}/api/logos`);
     setLogos(res.data);
   };
 
   const handleAddLogo = async () => {
-    if (!newLogo.image || !newLogo.name) return alert("Please enter name and select image");
+    if (!newLogo.image || !newLogo.name)
+      return alert("Please enter name and select image");
+
     const formData = new FormData();
     formData.append("name", newLogo.name);
     formData.append("image", newLogo.image);
 
-    await axios.post("https://xpomedia-statics-web-backend-1.onrender.com/api/logos", formData);
-
+    await axios.post(`${BASE_URL}/api/logos`, formData);
     setNewLogo({ name: "", image: null });
     await fetchLogos();
   };
-
 
   const handleUpdate = async () => {
     const formData = new FormData();
     formData.append("name", editingLogo.name);
     if (editingLogo.image) formData.append("image", editingLogo.image);
 
-    await axios.put(
-      `https://xpomedia-statics-web-backend-1.onrender.com/api/logos/${editingLogo._id}`,
-      formData
-    );
+    await axios.put(`${BASE_URL}/api/logos/${editingLogo._id}`, formData);
     setEditingLogo(null);
     await fetchLogos();
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`https://xpomedia-statics-web-backend-1.onrender.com/api/logos/${id}`);
+    await axios.delete(`${BASE_URL}/api/logos/${id}`);
     await fetchLogos();
   };
 
@@ -69,7 +62,9 @@ const res = await axios.get("https://xpomedia-statics-web-backend-1.onrender.com
           type="file"
           className="form-control"
           style={{ maxWidth: "200px" }}
-          onChange={(e) => setNewLogo({ ...newLogo, image: e.target.files[0] })}
+          onChange={(e) =>
+            setNewLogo({ ...newLogo, image: e.target.files[0] })
+          }
         />
         <button className="btn btn-primary" onClick={handleAddLogo}>
           Add Logo
@@ -81,7 +76,7 @@ const res = await axios.get("https://xpomedia-statics-web-backend-1.onrender.com
           <div key={logo._id} className="col">
             <div className="border p-3 d-flex flex-column align-items-center">
               <img
-                src={`https://xpomedia-statics-web-backend-1.onrender.com/uploads/${logo.image}?v=${Date.now()}`}
+                src={`${BASE_URL}/uploads/${logo.image}?v=${Date.now()}`}
                 alt={logo.name}
                 style={{
                   width: "150px",
@@ -92,7 +87,10 @@ const res = await axios.get("https://xpomedia-statics-web-backend-1.onrender.com
                 onClick={() => setEditingLogo(logo)}
               />
               <p className="mt-2">{logo.name}</p>
-              <button className="btn btn-danger btn-sm" onClick={() => handleDelete(logo._id)}>
+              <button
+                className="btn btn-danger btn-sm"
+                onClick={() => handleDelete(logo._id)}
+              >
                 Delete
               </button>
             </div>

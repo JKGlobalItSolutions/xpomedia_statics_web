@@ -3,16 +3,12 @@ import axios from "axios";
 
 const Clients = () => {
   const [logos, setLogos] = useState([]);
+  const BASE_URL = "https://xpomedia-statics-web-backend-1.onrender.com";
 
   useEffect(() => {
     const fetchLogos = async () => {
       try {
-        // const res = await axios.get("http://localhost:5000/api/logos");
-
-        const res = await axios.get(
-          "https://xpomedia-statics-web-backend-1.onrender.com/api/logos"
-        );
-
+        const res = await axios.get(`${BASE_URL}/api/logos`);
         setLogos(res.data);
       } catch (err) {
         console.error("Failed to fetch logos:", err);
@@ -48,18 +44,13 @@ const Clients = () => {
       <div className="container my-5">
         <h2 className="text-center mb-4">Our Trusted Institutions</h2>
 
-        <div className="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-4 bg-">
+        <div className="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-4">
           {logos.map((logo) => (
             <div key={logo._id} className="col text-center">
               <img
-
-                // src={`http://localhost:5000/uploads/${logo.image}`}
-
-                src={`https://xpomedia-statics-web-backend-1.onrender.com/uploads/${logo.image}`}
-
-
+                src={`${BASE_URL}/uploads/${logo.image}`}
                 alt={logo.name}
-                className="img-fluid  rounded-2"
+                className="img-fluid rounded-2"
                 style={{ maxWidth: "200px", height: "200px" }}
               />
               <p className="mt-2 small fw-bold">{logo.name}</p>
