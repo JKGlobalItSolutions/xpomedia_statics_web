@@ -151,8 +151,8 @@ const Clienticon = () => {
   const [editingLogo, setEditingLogo] = useState(null);
 
   // const BASE_URL = "http://localhost:5000"; 
-  const BASE_URL = "https://xpomedia-statics-web-backend-2ep9.onrender.com"; 
-
+  // const BASE_URL = "https://xpomedia-statics-web-backend-2ep9.onrender.com"; 
+  const BASE_URL = "https://xpomedia-statics-web-backend1.onrender.com";
 
   useEffect(() => {
     fetchLogos();
