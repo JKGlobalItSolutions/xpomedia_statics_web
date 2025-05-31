@@ -6,9 +6,9 @@ const Clienticon = () => {
   const [newLogo, setNewLogo] = useState({ name: "", image: null });
   const [editingLogo, setEditingLogo] = useState(null);
 
-  // const BASE_URL = "https://xpomedia-statics-web-backend1.onrender.com";
+  const BASE_URL = "https://xpomedia-statics-web-backend-1-thbm.onrender.com";
 
-  const BASE_URL = "http://localhost:5000";
+  // const BASE_URL = "http://localhost:5000";
 
   useEffect(() => {
     fetchLogos();
