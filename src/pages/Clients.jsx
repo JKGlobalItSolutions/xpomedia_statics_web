@@ -3,7 +3,8 @@ import axios from "axios";
 
 const Clients = () => {
   const [logos, setLogos] = useState([]);
-  const BASE_URL = "https://xpomedia-statics-web-backend-1.onrender.com";
+
+   const BASE_URL = "https://xpomedia-statics-web-backend-2ep9.onrender.com"; 
 
   useEffect(() => {
     const fetchLogos = async () => {
