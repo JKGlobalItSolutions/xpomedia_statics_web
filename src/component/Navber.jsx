@@ -68,7 +68,7 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
-              <Link className="btn btn-primary" to="/Clienticon">
+              <Link className="btn btn-primary" to="/Adminpage">
                 Admin
               </Link>
             </li>
